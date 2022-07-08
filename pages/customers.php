@@ -7,6 +7,14 @@
 	
 	require_once "../includes/classes.php";
 	
+	$deleted = globals::GetPlainString('deleted');
+	$output = "";
+	if($deleted == "true"){
+		$output = "Your customer was successfully deleted.";
+	}else if($deleted = "false"){
+		$output = "Your customer was not deleted.";
+	}
+	
 	$customers = Customers::GetAll($connection);
 	$customersJSON = json_encode($customers);
 	
@@ -17,6 +25,8 @@
 	
 		<div id='content'>
 			<h2>Customers</h2>
+
+			<span id='fademessage' style='opacity:1'><?php echo $output; ?></span><br>
 			
 			<table id='customertable'>
 			
@@ -51,6 +61,8 @@
 			</table>
 			
 		</div>
+		
+		<script src='../scripts/fademessage.js'></script>
 		
 <?php
 
