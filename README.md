@@ -1,2 +1,2 @@
 # simpleCustomerList
-Using AJAX and PHP, allows the user to Create, Read, Update, and Delete in a simple database of customers.
+Using HTML, CSS, Javascript, AJAX, PHP, and mySQLi, allows the user to Create, Read, Update, and Delete customers in a simple database.
