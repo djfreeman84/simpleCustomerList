@@ -5,10 +5,9 @@
 		public function Connection(){
 			
 			//Your Credentials here.
-			$user = 'root';
-			$password = '#duckiob';
+			$user = '';
+			$password = '';
 
-			//Your database here
 			$database = 'customer-sample';
 		
 			$connection = mysqli_connect('localhost', $user, $password, $database);
